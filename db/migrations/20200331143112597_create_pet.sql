@@ -1,8 +1,8 @@
 -- +micrate Up
 CREATE TABLE pets (
-  id BIGSERIAL PRIMARY KEY,
-  name VARCHAR,
-  breed VARCHAR,
+  id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+  name VARCHAR(255),
+  breed VARCHAR(255),
   age INT,
   created_at TIMESTAMP,
   updated_at TIMESTAMP
