@@ -21,7 +21,7 @@ process_count: 1
 # ssl_key_file:
 # ssl_cert_file:
 redis_url: "redis://localhost:6379"
-database_url: postgres://postgres:@localhost:5432/pet_tracker_test
+database_url: mysql://root:root@localhost:3306/pet_tracker_test
 auto_reload: false
 
 session:

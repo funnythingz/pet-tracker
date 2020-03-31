@@ -1,5 +1,5 @@
 type: app
-database: pg
+database: mysql
 language: slang
 model: granite
 
@@ -29,6 +29,6 @@ watch:
       - ./spec/**/*.cr
   npm:
     build_commands:
-      - npm install --loglevel=error
+      - yarn install
     run_commands:
-      - npm run watch
+      - yarn watch

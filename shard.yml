@@ -33,9 +33,8 @@ dependencies:
     github: amberframework/jasper-helpers
     version: ~> 0.2.5
 
-  pg:
-    github: will/crystal-pg
-    version: ~> 0.20.0
+  mysql:
+    github: crystal-lang/crystal-mysql
 
   citrine-i18n:
     github: amberframework/citrine-i18n

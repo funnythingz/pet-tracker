@@ -1,5 +1,5 @@
 class Pet < Granite::Base
-  connection pg
+  connection mysql
   table pets
 
   column id : Int64, primary: true
