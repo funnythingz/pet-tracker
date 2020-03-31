@@ -6,7 +6,7 @@ services:
     image: pet-tracker
     command: amber watch
     environment:
-      DATABASE_URL: postgres://admin:password@db:5432/pet_tracker_development
+      DATABASE_URL: mysql://root:root@db:3306/pet_tracker_development
     ports:
       - 3000:3000
     links:
@@ -21,20 +21,20 @@ services:
     image: pet-tracker
     command: bash -c 'while ! nc -q 1 db 5432 </dev/null; do sleep 1; done && amber db migrate seed'
     environment:
-      DATABASE_URL: postgres://admin:password@db:5432/pet_tracker_development
+      DATABASE_URL: mysql://root:root@db:3306/pet_tracker_development
     volumes:
       - .:/app
     links:
       - db
 
   db:
-    image: postgres
+    image: mysql
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: pet_tracker_development
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_DB: pet_tracker_development
     volumes:
-      - db:/var/lib/postgres/data
+      - db:/var/lib/mysql/data
 
 volumes:
   db:
